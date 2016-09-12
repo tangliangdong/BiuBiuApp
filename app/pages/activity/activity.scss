@@ -1,0 +1,162 @@
+
+.toolbar
+{
+    min-height: 3.25rem;
+}
+.nav-bar
+{
+    background-color: #de8949;
+}
+.nav-bar img
+{
+    max-width: 85%;
+    max-height: 130%;
+    margin-top: -.2rem;
+    margin-left: -1rem;
+}
+.bar-button
+{
+    height: 44px;
+}
+.nav-bar .header-btn .bar-button
+{
+    margin-left: -1em;
+}
+/* .header-btn .sqlit
+{
+    margin-right: .5rem;
+    margin-left: -.5rem;
+} */
+.nav-bar .header-btn span
+{
+    color: white;
+}
+
+
+.addbtn
+{
+    position: fixed;
+    z-index: 100;
+    top: 86%;
+    left: 88%;
+
+    transform: translate(-50%,-50%);
+}
+.addbtn button
+{
+    transition: 1s ease;
+}
+.home .button-clear:hover:not(.disable-hover) {
+    color: #387ef5;
+    opacity: 1;
+}
+
+
+.button-clear:hover:not(.disable-hover)
+{
+    background-color: transparent;
+}
+
+.addbtn-rotate
+{
+    transform: rotate(45deg);
+
+    background: transparent;
+}
+.addbtn-no-rotate
+{
+    transform: rotate(0deg);
+
+    background: transparent;
+}
+.threebtnteam
+{
+    position: fixed;
+    top: 80%;
+    left: 80%;
+}
+.threebtnteam button
+{
+    position: absolute;
+    z-index: 1;
+    top: 1.8rem;
+    left: 1.3rem;
+
+    display: block;
+
+    width: 2.7rem;
+    height: 2.7rem;
+
+    transition: 1s ease;
+    transform: translate(0);
+
+    opacity: 0;
+    border-radius: 2rem;
+}
+.threebtnteam button ion-icon{
+  margin: 0 auto;
+}
+.threebtnteam .firstbtn
+{
+    //display: block;
+    transform: translate(0,-4.4rem);
+
+    opacity: 1;
+    // top: -3rem;
+    // left:0px;
+}
+.nofirstbtn
+{
+    display: none;
+
+    transform: translate(0,0);
+
+    opacity: 0;
+}
+.threebtnteam .secondbtn
+{
+    display: block;
+
+    transform: translate(-4rem,-3rem);
+
+    opacity: 1;
+    // top: -.68rem;
+    // left:-4rem;
+}
+.nosecondbtn
+{
+    //display: none;
+    transform: translate(0,0);
+
+    opacity: 0;
+}
+
+.threebtnteam .thirdbtn
+{
+    //display: block;
+    transform: translate(-3.8rem,1rem);
+
+    opacity: 1;
+    // top: 3rem;
+    // left:-3rem;
+}
+.nothirdbtn
+{
+    // display: none;
+    transform: translate(0,0);
+
+    opacity: 0;
+}
+/* .threebtnteam button:nth-child(1){
+    top: -3rem;
+    left:0px;
+}
+.threebtnteam button:nth-child(2){
+    top: -.68rem;
+    left:-4rem;
+}
+.threebtnteam button:nth-child(3){
+    top: 3rem;
+    left:-3rem;
+}
+ */

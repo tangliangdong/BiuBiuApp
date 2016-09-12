@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar primary>
+    <ion-title>活动</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="home">
+  <ion-buttons end class="addbtn">
+    <button clear large headerbackground class="addthree" id="addthree" (click)="openThree()">
+      <ion-icon name="md-add-circle" ></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-buttons end class="threebtnteam" id="threebtnteam">
+    <button headerbackground id="firstbtn" (click)="threebtn(1)">
+      <ion-icon name="ios-camera" isActive="false"></ion-icon>
+    </button>
+    <button headerbackground id="secondbtn" (click)="threebtn(2)">
+      <ion-icon name="ios-timer" isActive="false"></ion-icon>
+    </button>
+     <button  headerbackground id="thirdbtn" (click)="threebtn(3)">
+      <ion-icon name="ios-pin"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-content class="login-content" padding>
+  <h1>Welcome Pocket</h1>
+  <img src="img/weizhi.png" alt="" id="loginImg" class="login-img">
+
+  <ion-item>
+    <ion-label>
+      <img src="img/text_person_icon.png" width="40px" alt="">
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="user.phoneNumber" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <img src="img/text_log_icon.png" width="40px" alt="">
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" id="userPassword"></ion-input>
+  </ion-item>
+
+  <button loginbtn block (click)='doLogin()'>登录</button>
+  <ion-buttons>
+    <button loginbtn (click)='doRegister()'>注册</button>
+    <button outline (click)='findPassword()'>忘记密码，点击找回密码！</button>
+  </ion-buttons>
+</ion-content>

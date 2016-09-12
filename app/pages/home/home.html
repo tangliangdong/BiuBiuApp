@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar primary>
+    <ion-buttons start>
+      <button royal>
+        <ion-icon name="ios-pin"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar (input)="getItems($event)" placeholder="BiuBiu一下"></ion-searchbar>
+    <ion-buttons end>
+      <button royal>
+        <ion-icon name="ios-barcode"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home">
+
+  <ion-slides #mySlider class="home-slides" [options]="mySlideOptions">
+    <ion-slide>
+      <img src="img/find1.png" alt="" />
+    </ion-slide>
+
+    <ion-slide>
+      <img src="img/find2.png" alt="" />
+    </ion-slide>
+
+    <ion-slide>
+      <img src="img/find2-1.png" alt="" />
+    </ion-slide>
+
+    <ion-slide>
+      <img src="img/find3-1.png" alt="" />
+    </ion-slide>
+    <ion-slide>
+      <img src="img/find5-1.png" alt="" />
+    </ion-slide>
+
+  </ion-slides>
+  <ion-item>
+    <ion-buttons>
+      <button clear class="five-btn">
+        <img src="img/top_limitactivity.png" alt="">
+        <p>限时活动</p>
+      </button>
+      <button clear class="five-btn">
+        <img src="img/top_group.png" alt="">
+        <p>百团大战</p>
+      </button>
+      <button clear class="five-btn">
+        <img src="img/top_city.png" alt="">
+        <p>同城</p>
+      </button>
+      <button clear class="five-btn">
+        <img src="img/top_newstore.png" alt="">
+        <p>新店活动</p>
+      </button>
+      <button clear class="five-btn">
+        <img src="img/top_publicwelfare.png" alt="">
+        <p>人人公益</p>
+      </button>
+    </ion-buttons>
+  </ion-item>
+
+  <ion-list class="card-background-page" >
+    <ion-card *ngFor="let activity of activitys">
+      <img src="img/{{activity.img}}"/>
+      <div class="card-title">{{activity.title}}</div>
+      <div class="card-time">时间：{{activity.time}} </div>
+      <div class="card-site">地点：{{activity.site}}</div>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

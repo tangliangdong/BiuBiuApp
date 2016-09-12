@@ -1,0 +1,79 @@
+//轮播图
+ion-slides
+{
+    //position: static;
+    height: auto;
+}
+.home scroll-content
+{
+    //background-color: #222;
+}
+.home-slides
+{
+    //max-height:10px;
+}
+.home .home-slides img
+{
+    min-width: 100%;
+}
+.swiper-slide
+{
+    align-items: flex-start;
+    //max-height:11.5rem;
+}
+.home .item .item-inner {
+    border-bottom: none;
+}
+.home .five-btn{
+  position: relative;
+  height: 50px;
+  overflow: visible;
+}
+.home .five-btn p{
+  position: absolute;
+  left: 50%;
+  top: 78%;
+  transform: translate(-50%);
+}
+.home .five-btn img{
+  margin: -10px auto 0;
+  width: 30px;
+}
+
+//
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 26%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-time {
+    font-size: 1.2em;
+    position: absolute;
+    top: 52%;
+    left: 10%;
+    color: #fff;
+    width: 40%;
+
+  }
+
+  .card-site {
+    font-size: 1.2em;
+    position: absolute;
+    top: 52%;
+    left: 56%;
+    color: #fff;
+    width: 40%;
+  }
+
+}
