@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar primary>
     <ion-buttons start>
-      <button royal>
+      <button royal (click)="location()" >
         <ion-icon name="ios-pin"></ion-icon>
       </button>
     </ion-buttons>
@@ -38,32 +38,42 @@
 
   </ion-slides>
   <ion-item>
-    <ion-buttons>
-      <button clear class="five-btn">
-        <img src="img/top_limitactivity.png" alt="">
-        <p>限时活动</p>
-      </button>
-      <button clear class="five-btn">
-        <img src="img/top_group.png" alt="">
-        <p>百团大战</p>
-      </button>
-      <button clear class="five-btn">
-        <img src="img/top_city.png" alt="">
-        <p>同城</p>
-      </button>
-      <button clear class="five-btn">
-        <img src="img/top_newstore.png" alt="">
-        <p>新店活动</p>
-      </button>
-      <button clear class="five-btn">
-        <img src="img/top_publicwelfare.png" alt="">
-        <p>人人公益</p>
-      </button>
-    </ion-buttons>
+    <ion-row>
+      <ion-col width-20>
+        <button clear class="five-btn" (click)="limitActivity()">
+          <img src="img/top_limitactivity.png" alt="">
+          <p>限时活动</p>
+        </button>
+      </ion-col>
+      <ion-col width-20>
+        <button clear class="five-btn">
+          <img src="img/top_group.png" alt="">
+          <p>百团大战</p>
+        </button>
+      </ion-col>
+      <ion-col width-20>
+        <button clear class="five-btn">
+          <img src="img/top_city.png" alt="">
+          <p>同城</p>
+        </button>
+      </ion-col>
+      <ion-col width-20>
+        <button clear class="five-btn">
+          <img src="img/top_newstore.png" alt="">
+          <p>新店活动</p>
+        </button>
+      </ion-col>
+      <ion-col width-20>
+        <button clear class="five-btn">
+          <img src="img/top_publicwelfare.png" alt="">
+          <p>人人公益</p>
+        </button>
+      </ion-col>
+    </ion-row>
   </ion-item>
 
   <ion-list class="card-background-page" >
-    <ion-card *ngFor="let activity of activitys">
+    <ion-card *ngFor="let activity of activitys" (click)="itemSelected(activity)">
       <img src="img/{{activity.img}}"/>
       <div class="card-title">{{activity.title}}</div>
       <div class="card-time">时间：{{activity.time}} </div>

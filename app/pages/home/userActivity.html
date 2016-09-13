@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button royal (click)="backToHome()">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end (click)="transmit()">
+      <button>
+        <ion-icon name="ios-redo"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="userActivity-content">
+  <div class="user-card">
+    <img src="img/{{activity.img}}" alt="">
+    <div class="card-title">{{activity.title}}</div>
+    <div class="card-time">时间：{{activity.time}}</div>
+    <div class="card-site">地点：{{activity.site}}</div>
+  </div>
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="img/mingren.jpg" alt="">
+    </ion-avatar>
+    <h3>发起人：{{activity.initiator}}</h3>
+    <ion-icon name="ios-text-outline" item-right></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="pin"></ion-icon>
+    <span>活动地点：{{activity.site}}</span>
+    <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="md-time"></ion-icon>
+    <span>活动时间：{{activity.time}}</span>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="ios-people"></ion-icon>
+    <span>可报名人数：{{activity.availablePerson}}人</span>
+  </ion-item>
+  <ion-item class="last-item">
+    <ion-icon name="ios-heart" item-left></ion-icon>
+    <ion-icon name="ios-text" item-left></ion-icon>
+    <button clear dark (click)="attendActivity()">加入活动</button>
+  </ion-item>
+</ion-content>

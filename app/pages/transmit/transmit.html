@@ -1,0 +1,46 @@
+<ion-content class="transmit-content" padding>
+  <ion-item class="title">
+    <h4>您的发布很快会被大家看到哦！</h4>
+  </ion-item>
+  <span>更多圈子任你分享</span>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-30>
+        <button clear class="share" (click)="shareToOther(weixin)">
+          <img src="img/{{weixin.img}}" alt="">
+          <p>{{weixin.title}}</p>
+        </button>
+      </ion-col>
+      <ion-col width-30>
+        <button clear class="share" (click)="shareToOther(circleFriends)">
+          <img src="img/{{circleFriends.img}}" alt="">
+          <p>{{circleFriends.title}}</p>
+        </button>
+      </ion-col>
+      <ion-col width-30>
+        <button clear class="share" (click)="shareToOther(microblog)">
+          <img src="img/{{microblog.img}}" alt="">
+          <p>{{microblog.title}}</p>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-30>
+        <button clear class="share" (click)="shareToOther(QQzone)">
+          <img src="img/{{QQzone.img}}" alt="">
+          <p>{{QQzone.title}}</p>
+        </button>
+      </ion-col>
+      <ion-col width-30>
+        <button clear class="share" (click)="shareToOther(QQfriends)">
+          <img src="img/{{QQfriends.img}}" alt="">
+          <p>{{QQfriends.title}}</p>
+        </button>
+      </ion-col>
+      <ion-col width-30></ion-col>
+    </ion-row>
+  </ion-grid>
+  <button clear (click)="comeBack()" class="back-btn">
+    <ion-icon name="md-close"></ion-icon>
+  </button>
+</ion-content>
