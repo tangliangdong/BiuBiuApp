@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-segment>
+    <ion-segment [(ngModel)]="pet">
       <ion-segment-button value="new">
         动态
       </ion-segment-button>
@@ -15,5 +15,15 @@
 </ion-header>
 
 <ion-content>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'new'">
 
+    </ion-list>
+    <ion-list *ngSwitchCase="'message'">
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'contact'">
+
+    </ion-list>
+  </div>
 </ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar primary>
+    <ion-buttons start>
+      <button royal (click)="backToHome()">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>我的设置</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="setting-content">
+  <ion-item>
+    <ion-icon name="ios-lock"></ion-icon>
+    <span>修改密码</span>
+    <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="ios-people"></ion-icon>
+    <span>关于我们</span>
+    <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="ios-mail-outline"></ion-icon>
+    <span>联系我们</span>
+    <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="ios-alert-outline"></ion-icon>
+    <span>检测更新</span>
+    <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+  <button class="exit-btn" (click)="cancel()">退出登录</button>
+</ion-content>

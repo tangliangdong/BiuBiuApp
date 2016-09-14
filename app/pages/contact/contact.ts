@@ -7,8 +7,8 @@ import {DynamicPage} from '../contact/dynamic';
   templateUrl: 'build/pages/contact/contact.html'
 })
 export class ContactPage {
-  private chatRoot: any;
+  public contact: string = "new";
   constructor(private navCtrl: NavController) {
-    this.chatRoot = DynamicPage;
+
   }
 }

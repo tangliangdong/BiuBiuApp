@@ -4,18 +4,22 @@ import {NavController,ModalController,Platform,ViewController,LoadingController,
 import {ResetPasswordPage} from '../login/resetPassword';
 import {RegisterPage} from '../login/register';
 
-
 @Component({
   templateUrl: 'build/pages/login/login.html'
 })
 export class LoginPage {
 
   private loginImg : any;
-  public user = {
+  public allUser = [
+    {username: 'BiuBiu官方',phone: '10086', password: '10086',img: 'xingkong.jpg'},
+    {username: '小唐',phone: '100', password: '100',img: 'mingren.jpg'}
+  ]
+  public loginUser = {
     phoneNumber : '',
     password : ''
   };
   private userPassword : any;
+  private canLogin = false;
 
   constructor(private navCtrl: NavController,
               platform: Platform,
@@ -36,21 +40,7 @@ export class LoginPage {
   }
   //登录账号
   doLogin(){
-    if(this.user.phoneNumber == '110' && this.user.password =='110' ){
-      let loadingLogin = this.loadingCtrl.create({
-        content: '正在登陆',
-        spinner: 'ios',
-        duration: 2000
-      });
-      localStorage.setItem('phoneNumber',this.user.phoneNumber);
-      loadingLogin.present();
-      setTimeout(()=>{
-        loadingLogin.dismiss();
-      },2000);
-      setTimeout(() =>{
-        this.viewCtrl.dismiss(this.user);
-      }, 3000);
-    }else if( this.user.phoneNumber == '' || this.user.password ==''){
+    if( this.loginUser.phoneNumber == '' || this.loginUser.password ==''){
       let toastError = this.toastCtrl.create({
         message: '手机号或密码不能为空',
         duration: 3000,
@@ -58,6 +48,43 @@ export class LoginPage {
       });
       toastError.present();
     }else{
+      for (var data in this.allUser) {
+        if(this.allUser[data].phone == this.loginUser.phoneNumber &&
+          this.allUser[data].password == this.loginUser.password){
+          this.canLogin = true;
+          let loadingLogin = this.loadingCtrl.create({
+            content: '正在登陆',
+            spinner: 'ios',
+            duration: 2000
+          });
+          localStorage.setItem('phoneNumber',this.loginUser.phoneNumber);
+          loadingLogin.present();
+          setTimeout(()=>{
+            loadingLogin.dismiss();
+          },2000);
+          setTimeout(() =>{
+            this.viewCtrl.dismiss(this.loginUser);
+          }, 3000);
+          break;
+        }
+      }
+      if(this.canLogin == false){
+        let toastError = this.toastCtrl.create({
+          message: '手机号或密码错误',
+          duration: 3000,
+          position: 'top'
+        });
+        toastError.onDidDismiss(() => {
+          this.userPassword[0].value = '';
+        });
+        toastError.present();
+      }
+    }
+
+
+    /*if(this.loginUser.phoneNumber == '110' && this.loginUser.password =='110' ){
+
+    }else else{
       let toastError = this.toastCtrl.create({
         message: '手机号或密码错误',
         duration: 3000,
@@ -67,7 +94,7 @@ export class LoginPage {
         this.userPassword[0].value = '';
       });
       toastError.present();
-    }
+    }*/
   }
   //跳转注册页面
   doRegister(){

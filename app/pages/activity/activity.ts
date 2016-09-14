@@ -21,12 +21,12 @@ export class ActivityPage {
   constructor(private navCtrl: NavController,
               platform: Platform,
               public modalCtrl: ModalController) {
-    if(localStorage.getItem('phoneNumber')==null) {
-      let loginNav = this.navCtrl.push(LoginPage);
-    }else{
-      // this.user.phoneNumber = localStorage.getItem('phoneNumber');
-      // this.user.register = '';
-    }
+    // if(localStorage.getItem('phoneNumber')==null) {
+    //   let loginNav = this.navCtrl.push(LoginPage);
+    // }else{
+    //   // this.user.phoneNumber = localStorage.getItem('phoneNumber');
+    //   // this.user.register = '';
+    // }
     platform.ready().then((readySource) => {
       // Platform now ready, execute any required native code
       //this.slider.slideNext(300);
