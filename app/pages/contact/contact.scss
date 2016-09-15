@@ -1,2 +1,21 @@
-.contact {
+.contact-content{
+  .message{
+    img{
+      height: 6rem;
+    }
+    p{
+      font-size: 1.8rem;
+    }
+    span{
+      font-size: 1.4rem;
+    }
+  }
+  .chat{
+    img{
+      height: 6rem;
+    }
+    p{
+      font-size: 1.8rem;
+    }
+  }
 }

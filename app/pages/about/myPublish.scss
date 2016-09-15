@@ -1,0 +1,35 @@
+.publish-content{
+  .card-background-page {
+    ion-card {
+      position: relative;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .card-title {
+      position: absolute;
+      top: 26%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+    .card-time {
+      font-size: 1.2em;
+      position: absolute;
+      top: 52%;
+      left: 10%;
+      color: #fff;
+      width: 40%;
+
+    }
+    .card-site {
+      font-size: 1.2em;
+      position: absolute;
+      top: 52%;
+      left: 56%;
+      color: #fff;
+      width: 40%;
+    }
+  }
+}
+

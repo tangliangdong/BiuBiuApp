@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar primary>
+    <ion-buttons start>
+      <button royal (click)="backToHome()">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>我的钱包</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="wallet-content">
+  <ion-item>
+    <img src="img/paypal.png" alt="" class="paypal" item-left>
+    <span>账户余额：100元</span>
+    <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+  </ion-item>
+  <ion-item class="wallet-btns">
+      <button outline>充值</button>
+      <button outline>提现</button>
+  </ion-item>
+</ion-content>

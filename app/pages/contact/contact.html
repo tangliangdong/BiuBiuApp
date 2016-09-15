@@ -1,29 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-segment [(ngModel)]="pet">
+    <ion-segment [(ngModel)]="contacts">
       <ion-segment-button value="new">
         动态
       </ion-segment-button>
       <ion-segment-button value="message">
         消息
       </ion-segment-button>
-      <ion-segment-button value="contact">
+      <ion-segment-button value="chat">
         聊天
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div [ngSwitch]="pet">
+<ion-content class="contact-content">
+  <div [ngSwitch]="contacts">
     <ion-list *ngSwitchCase="'new'">
 
     </ion-list>
-    <ion-list *ngSwitchCase="'message'">
-
+    <ion-list *ngSwitchCase="'message'" class="message">
+      <ion-item>
+        <img src="img/mingren.jpg" alt="" item-left>
+        <p>BiuBiu官方</p>
+        <span>您有新的活动准备接受</span>
+      </ion-item>
     </ion-list>
-    <ion-list *ngSwitchCase="'contact'">
-
+    <ion-list *ngSwitchCase="'chat'" class="chat">
+      <ion-item>
+        <img src="img/mingren.jpg" alt="" item-left>
+        <p>BiuBiu官方</p>
+      </ion-item>
     </ion-list>
   </div>
 </ion-content>
