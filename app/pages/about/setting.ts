@@ -31,18 +31,17 @@ export class SettingPage {
           text: '确定',
           handler: () => {
             localStorage.removeItem('phoneNumber');
+            localStorage.removeItem('username');
+            let comfirmCancelToast = this.toastCtrl.create({
+              message: '您已成功退出登录',
+              duration: 3000,
+              position: 'top'
+            });
+            comfirmCancelToast.present();
           }
         }
       ]
     });
     cancelAlert.present();
-    let comfirmCancelToast = this.toastCtrl.create({
-      message: '您已成功退出登录',
-      duration: 3000,
-      position: 'top'
-    });
-    comfirmCancelToast.present();
-
-
   }
 }

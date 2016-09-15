@@ -8,23 +8,34 @@ import {MyPublishPage} from '../about/myPublish';
 import {MyAttendPage} from '../about/myAttend';
 import {MyCollectPage} from '../about/myCollect';
 import {MyWalletPage} from '../about/myWallet';
+import {UserCenterPage} from '../about/userCenter';
 
 @Component({
   templateUrl: 'build/pages/about/about.html'
 })
 export class AboutPage {
-  constructor(private navCtrl: NavController,
-              private modalCtrl: ModalController) {
+  public showUser = {
+    username: '未登录',
+    signature: ''
   }
 
-  openSetting(){
-    let settingModal = this.modalCtrl.create(SettingPage);
-    settingModal.present();
+  constructor(private navCtrl: NavController,
+              private modalCtrl: ModalController) {
+    if(localStorage.getItem('phoneNumber') != null){
+      this.showUser.username = localStorage.getItem('username');
+      this.showUser.signature = localStorage.getItem('signature');
+    }
   }
 
   openUserCenter(){
-    let loginModal = this.modalCtrl.create(LoginPage);
-    loginModal.present();
+    if(localStorage.getItem('phoneNumber')==null){
+      let loginModal = this.modalCtrl.create(LoginPage);
+      loginModal.present();
+    }else{
+      let  userCenterModal = this.modalCtrl.create(UserCenterPage);
+      userCenterModal.present();
+    }
+
   }
 
   open(word){

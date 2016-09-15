@@ -11,12 +11,14 @@ export class LoginPage {
 
   private loginImg : any;
   public allUser = [
-    {username: 'BiuBiu官方',phone: '10086', password: '10086',img: 'xingkong.jpg'},
-    {username: '小唐',phone: '100', password: '100',img: 'mingren.jpg'}
+    {username: 'BiuBiu官方',phone: '10086', password: '10086',signature: '发起组队活动,新的生活体验',img: 'xingkong.jpg'},
+    {username: '小唐',phone: '100', password: '100',signature: 'Hello ionic',img: 'mingren.jpg'}
   ]
   public loginUser = {
     phoneNumber : '',
-    password : ''
+    password : '',
+    username : '',
+    signature: '',
   };
   private userPassword : any;
   private canLogin = false;
@@ -52,12 +54,16 @@ export class LoginPage {
         if(this.allUser[data].phone == this.loginUser.phoneNumber &&
           this.allUser[data].password == this.loginUser.password){
           this.canLogin = true;
+          this.loginUser.signature = this.allUser[data].signature;
+          this.loginUser.username = this.allUser[data].username;
           let loadingLogin = this.loadingCtrl.create({
             content: '正在登陆',
             spinner: 'ios',
             duration: 2000
           });
           localStorage.setItem('phoneNumber',this.loginUser.phoneNumber);
+          localStorage.setItem('username',this.loginUser.username);
+          localStorage.setItem('signature',this.loginUser.signature);
           loadingLogin.present();
           setTimeout(()=>{
             loadingLogin.dismiss();
