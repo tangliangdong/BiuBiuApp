@@ -8,7 +8,7 @@
     <ion-title>用户中心</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content padding>
   <ion-item>
     <span item-left>用户名：</span>
     <span>{{user.username}}</span>
@@ -17,4 +17,5 @@
     <span item-left>手机：</span>
     <span>{{user.phoneNumber}}</span>
   </ion-item>
+  <button block outline (click)="cancel()">注销</button>
 </ion-content>

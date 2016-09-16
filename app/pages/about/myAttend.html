@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar primary>
     <ion-buttons start>
       <button royal (click)="backToHome()">
         <ion-icon name="ios-arrow-back"></ion-icon>
@@ -9,12 +9,12 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="attend-contend">
-  <ion-list class="card-background-page" >
+  <ion-list class="card-background-page" *ngFor="let item of datas">
     <ion-card>
-      <img src="img/activity1.png"/>
-      <div class="card-title">111</div>
-      <div class="card-time">时间：222 </div>
-      <div class="card-site">地点：333</div>
+      <img src="img/{{item.img}}"/>
+      <div class="card-title">{{item.title}}</div>
+      <div class="card-time">时间：{{item.time}} </div>
+      <div class="card-site">地点：{{item.site}}</div>
     </ion-card>
   </ion-list>
 </ion-content>

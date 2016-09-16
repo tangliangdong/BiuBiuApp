@@ -1,7 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button royal (click)="backToHome()">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>登录</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content class="login-content" padding>
-  <h1>Welcome Pocket</h1>
   <img src="img/weizhi.png" alt="" id="loginImg" class="login-img">
-
   <ion-item>
     <ion-label>
       手机：
@@ -14,7 +22,6 @@
     </ion-label>
     <ion-input type="password" [(ngModel)]="loginUser.password" id="userPassword"></ion-input>
   </ion-item>
-
   <button loginbtn block (click)='doLogin()'>登录</button>
   <ion-buttons start>
     <button loginbtn (click)='doRegister()'>注册</button>

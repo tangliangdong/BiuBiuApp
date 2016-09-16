@@ -17,7 +17,7 @@ export class LoginPage {
   public loginUser = {
     phoneNumber : '',
     password : '',
-    username : '',
+    username : '未登录',
     signature: '',
   };
   private userPassword : any;
@@ -104,12 +104,18 @@ export class LoginPage {
   }
   //跳转注册页面
   doRegister(){
-    let register = this.modalCtrl.create(RegisterPage);
-    register.present();
+    let registerModal = this.modalCtrl.create(RegisterPage);
+    registerModal.onDidDismiss(data=>{
+
+    });
+    registerModal.present();
   }
   //忘记密码，跳转到找回密码页面
   findPassword(){
     let findPasswordModal = this.modalCtrl.create(ResetPasswordPage);
     findPasswordModal.present();
+  }
+  backToHome(){
+    this.viewCtrl.dismiss(this.loginUser);
   }
 }

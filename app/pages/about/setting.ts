@@ -5,6 +5,11 @@ import {NavController,ViewController,ModalController,AlertController,ToastContro
   templateUrl: 'build/pages/about/setting.html'
 })
 export class SettingPage {
+  public showUser = {
+    username: '未登录',
+    signature: ''
+  }
+
   constructor(private navCtrl: NavController,
               private viewCtrl: ViewController,
               private modalCtrl: ModalController,
@@ -32,12 +37,16 @@ export class SettingPage {
           handler: () => {
             localStorage.removeItem('phoneNumber');
             localStorage.removeItem('username');
-            let comfirmCancelToast = this.toastCtrl.create({
+            localStorage.removeItem('signature');
+            setTimeout(() =>{
+              this.viewCtrl.dismiss(this.showUser);
+            }, 1000);
+            /*let comfirmCancelToast = this.toastCtrl.create({
               message: '您已成功退出登录',
-              duration: 3000,
+              duration: 2000,
               position: 'top'
             });
-            comfirmCancelToast.present();
+            comfirmCancelToast.present();*/
           }
         }
       ]

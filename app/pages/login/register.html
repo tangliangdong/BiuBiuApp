@@ -9,5 +9,22 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
+  <ion-item>
+    <ion-label>
+      手机：
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="RegisterUser.phoneNumber"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      密码：
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="RegisterUser.password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      确认密码：
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="RegisterUser.comfirmPassword"></ion-input>
+  </ion-item>
 </ion-content>

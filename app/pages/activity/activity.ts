@@ -2,6 +2,8 @@ import {Component,ViewChild} from '@angular/core';
 import {NavController,Slides,Platform,ModalController} from 'ionic-angular';
 
 import {LoginPage} from '../login/login';
+import {PublishingActivityPage} from '../activity/publishingActivity';
+
 @Component({
   templateUrl: 'build/pages/activity/activity.html'
 })
@@ -44,6 +46,21 @@ export class ActivityPage {
     });
   }
 
+  threebtn(number){
+    switch (number) {
+      case 1:
+        let publishModal = this.modalCtrl.create(PublishingActivityPage);
+        publishModal.present();
+        break;
+      case 2:
+
+        break;
+      case 3:
+
+        break;
+    }
+  }
+
   openThree(){
     //console.log(this.firstbtn);
     if(!this.isRotate){
@@ -56,7 +73,6 @@ export class ActivityPage {
       this.firstbtn.setAttribute('class','firstbtn');
       this.secondbtn.setAttribute('class','secondbtn');
       this.thirdbtn.setAttribute('class','thirdbtn');
-
     }else{
       this.isRotate = false;
       this.addthree.removeAttribute('addbtn-rotate');
@@ -72,7 +88,6 @@ export class ActivityPage {
   login(){
     let loginModal = this.modalCtrl.create(LoginPage);
     loginModal.onDidDismiss(data => {
-      console.log(data);
       this.user.phoneNumber = data.phoneNumber;
       this.user.register = '';
     });
