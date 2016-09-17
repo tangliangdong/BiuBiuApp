@@ -39,9 +39,18 @@
     <ion-icon name="ios-people"></ion-icon>
     <span>可报名人数：{{activity.availablePerson}}人</span>
   </ion-item>
-  <ion-item class="last-item">
-    <ion-icon name="ios-heart" item-left></ion-icon>
-    <ion-icon name="ios-text" item-left></ion-icon>
-    <button clear dark (click)="attendActivity()">加入活动</button>
-  </ion-item>
+
+  <ion-buttons start class="activity-btns">
+    <button clear id="collectId" (click)="collect()" >
+      <ion-icon name="ios-heart"></ion-icon>
+    </button>
+    <button clear class="chat-btn">
+      <ion-icon name="ios-text"></ion-icon>
+    </button>
+    <button outline dark (click)="attendActivity()">加入活动</button>
+  </ion-buttons>
+
+
+
+
 </ion-content>

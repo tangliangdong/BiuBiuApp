@@ -1,4 +1,43 @@
 .contact-content{
+  .news-item{
+    [item-left] {
+        margin: 0px 16px 8px 0;
+
+    }
+    ion-avatar{
+      display: block;
+      float: left;
+    }
+    span{
+      font-weight: bold;
+    }
+    i{
+      color: #767676;
+      font-style: normal;
+      font-weight: bold;
+    }
+    em{
+      font-size: 1.2rem;
+      color: #9F9F9D;
+      font-style: normal;
+    }
+    .attention{
+      width: 80px;
+      height: 80px;
+      background-color: #D2D2D2;
+      margin: 5px 0 0 52px;
+
+      white-space: normal;
+
+      span{
+        width: 80px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display:block;
+      }
+    }
+  }
+
   .message{
     img{
       height: 6rem;

@@ -17,7 +17,18 @@
 <ion-content class="contact-content">
   <div [ngSwitch]="contacts">
     <ion-list *ngSwitchCase="'new'">
-
+      <ion-item class="news-item">
+        <div>
+          <ion-avatar>
+            <img src="img/touxiang.jpg" alt="" item-left>
+          </ion-avatar>
+          <span>旋涡鸣人</span>&nbsp;<i>喜欢了1篇</i><br>
+          <em>16小时前</em>
+        </div>
+        <div class="attention">
+          <span>麦兜《饭宝奇兵》微影评</span>
+        </div>
+      </ion-item>
     </ion-list>
     <ion-list *ngSwitchCase="'message'" class="message">
       <ion-item>

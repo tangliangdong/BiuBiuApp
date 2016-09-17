@@ -39,6 +39,9 @@ export class HomePage {
     {'number': 3, 'attendUserPhone' : 100},
     {'number': 2, 'attendUserPhone' : 10086},
   ];*/
+  private tabs : any;
+  private tabsChild : any;
+  private windowHeight: string;
 
   constructor(private navCtrl: NavController,
               private modalCtrl: ModalController,
@@ -64,7 +67,7 @@ export class HomePage {
   itemSelected(activity){
     if(localStorage.getItem('phoneNumber') == null){
       let loginALert = this.alertCtrl.create({
-        title: '请登录再查看详细信息',
+        title: '请登录再发布活动',
         buttons: [
         {
           text: '取消',
@@ -76,7 +79,6 @@ export class HomePage {
         {
           text: '去登录',
           handler: () => {
-            console.log('123');
             let dologinModal = this.modalCtrl.create(LoginPage);
             dologinModal.present();
           }
@@ -90,6 +92,5 @@ export class HomePage {
       });
       UserActivityModal.present();
     }
-
   }
 }

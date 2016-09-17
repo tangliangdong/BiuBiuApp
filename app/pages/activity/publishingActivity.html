@@ -21,13 +21,13 @@
     <ion-label>
       开始时间：
     </ion-label>
-    <ion-input type="date" [(ngModel)]="publishActivity.startTime"></ion-input>
+    <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="publishActivity.startTime"></ion-datetime>
   </ion-item>
   <ion-item>
     <ion-label>
       结束时间：
     </ion-label>
-    <ion-input type="date" [(ngModel)]="publishActivity.endTime"></ion-input>
+    <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="publishActivity.endTime"></ion-datetime>
   </ion-item>
   <ion-item>
     <ion-label>

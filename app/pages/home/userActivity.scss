@@ -35,13 +35,17 @@
   .margin-10{
     margin-left: 5px;
   }
-  .last-item{
-    button span{
-      font-weight: bold;
-      font-size: 1.8rem;
+  .activity-btns{
+    .button-icon-only ion-icon {
+      padding: 0;
+      margin: 0 .2rem 0 2rem;
+      pointer-events: none;
     }
-    ion-label {
-      text-align: center;
+    .chat-btn{
+      margin-right: 20%;
+    }
+    .collect{
+      color: red;
     }
   }
 }

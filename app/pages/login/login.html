@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="login-content" padding>
-  <img src="img/weizhi.png" alt="" id="loginImg" class="login-img">
+  <img src="img/touxiang.jpg" alt="" id="loginImg" class="login-img">
   <ion-item>
     <ion-label>
       手机：
@@ -22,11 +22,15 @@
     </ion-label>
     <ion-input type="password" [(ngModel)]="loginUser.password" id="userPassword"></ion-input>
   </ion-item>
-  <button loginbtn block (click)='doLogin()'>登录</button>
-  <ion-buttons start>
-    <button loginbtn (click)='doRegister()'>注册</button>
+  <button loginbtn block (click)='doLogin()' id="loginBtn">登录</button>
+  <ion-item class="serviceTerms" >
+    <ion-label>我已阅读并同意&nbsp;<em>服务条款</em></ion-label>
+    <ion-checkbox dark checked="true" (click)="serviceBtn()"></ion-checkbox>
+  </ion-item>
+  <ion-buttons end class="find-btn">
+    <button clear (click)='findPassword()'>无法登陆?</button>
   </ion-buttons>
-  <ion-buttons end>
-    <button outline (click)='findPassword()'>忘记密码</button>
+  <ion-buttons start class="register-btn">
+    <button loginbtn clear (click)='doRegister()'>新用户注册</button>
   </ion-buttons>
 </ion-content>

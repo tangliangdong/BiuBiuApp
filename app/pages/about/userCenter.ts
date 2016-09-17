@@ -25,7 +25,11 @@ export class UserCenterPage {
   }
 
   backToHome(){
-    this.viewCtrl.dismiss();
+    if(localStorage.getItem('username') != null){
+      this.showUser.username = localStorage.getItem('username');
+      this.showUser.signature = localStorage.getItem('signature');
+    }
+    this.viewCtrl.dismiss(this.showUser);
   }
   cancel(){
     let cancelAlert = this.alertCtrl.create({

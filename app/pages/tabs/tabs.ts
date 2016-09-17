@@ -9,6 +9,9 @@ import {ActivityPage} from '../activity/activity';
 })
 export class TabsPage {
 
+  private windowHeight: string;
+  private tabs : any;
+
   private tab1Root: any;
   private tab2Root: any;
   private tab3Root: any;
@@ -21,5 +24,9 @@ export class TabsPage {
     this.tab2Root = ActivityPage;
     this.tab3Root = ContactPage;
     this.tab4Root = AboutPage;
+    this.tabs = document.getElementById('tabs');
+    this.windowHeight = document.documentElement.clientHeight + '';
+    // this.tabs.setAttribute('top', this.windowHeight);
+    // this.tabs.setAttribute('transform:','translate(0,-100%)');
   }
 }

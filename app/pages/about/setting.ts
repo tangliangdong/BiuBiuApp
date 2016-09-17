@@ -18,7 +18,11 @@ export class SettingPage {
   }
 
   backToHome(){
-    this.viewCtrl.dismiss();
+    if(localStorage.getItem('phoneNumber') != null){
+      this.showUser.username = localStorage.getItem('username');
+      this.showUser.signature = localStorage.getItem('signature');
+    }
+    this.viewCtrl.dismiss(this.showUser);
   }
 
   cancel(){

@@ -135,7 +135,6 @@ export class AboutPage {
         case "setting":
           let settingModal = this.modalCtrl.create(SettingPage);
           settingModal.onDidDismiss(data => {
-            console.log(data);
             this.showUser.username = data.username;
             this.showUser.signature = data.signature;
           });

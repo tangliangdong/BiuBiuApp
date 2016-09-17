@@ -22,6 +22,8 @@ export class LoginPage {
   };
   private userPassword : any;
   private canLogin = false;
+  public checked = true;
+  private loginBtn : any;
 
   constructor(private navCtrl: NavController,
               platform: Platform,
@@ -30,7 +32,7 @@ export class LoginPage {
               private loadingCtrl: LoadingController,
               private toastCtrl: ToastController) {
     platform.ready().then((readySource) => {
-
+      this.loginBtn = document.getElementById('loginBtn');
     });
   }
   //定位图标跳动进入效果
@@ -102,6 +104,15 @@ export class LoginPage {
       toastError.present();
     }*/
   }
+  serviceBtn(){
+    if(this.checked){
+      this.checked = false;
+      this.loginBtn.disabled = true;
+    }else{
+      this.checked = true;
+      this.loginBtn.disabled = false;
+    }
+  }
   //跳转注册页面
   doRegister(){
     let registerModal = this.modalCtrl.create(RegisterPage);
@@ -116,6 +127,8 @@ export class LoginPage {
     findPasswordModal.present();
   }
   backToHome(){
+    this.loginUser.username = '未登录';
+    this.loginUser.signature = '';
     this.viewCtrl.dismiss(this.loginUser);
   }
 }

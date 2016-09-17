@@ -3,7 +3,16 @@
     <ion-title>活动</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content padding class="home">
+<ion-content class="activity-content">
+  <ion-list class="card-background-page" >
+    <ion-card *ngFor="let activity of activitys" (click)="itemSelected(activity)">
+      <img src="img/{{activity.img}}"/>
+      <div class="card-title">{{activity.title}}</div>
+      <div class="card-time">时间：{{activity.time}} </div>
+      <div class="card-site">地点：{{activity.site}}</div>
+    </ion-card>
+  </ion-list>
+
   <ion-buttons end class="addbtn">
     <button clear large headerbackground class="addthree" id="addthree" (click)="openThree()">
       <ion-icon name="md-add-circle" ></ion-icon>
@@ -12,7 +21,7 @@
 
   <ion-buttons end class="threebtnteam" id="threebtnteam">
     <button headerbackground id="firstbtn" (click)="threebtn(1)">
-      <ion-icon name="ios-camera" isActive="false"></ion-icon>
+      <ion-icon name="ios-create" isActive="false"></ion-icon>
     </button>
     <button headerbackground id="secondbtn" (click)="threebtn(2)">
       <ion-icon name="ios-timer" isActive="false"></ion-icon>
