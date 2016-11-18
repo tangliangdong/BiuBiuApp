@@ -5,17 +5,14 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content class="about">
   <ion-item class="user-center" (click)="openUserCenter()">
     <ion-avatar item-left>
-      <img src="img/mingren.jpg" alt="">
+      <img src="img/logo.png" alt="">
     </ion-avatar>
     <h3>{{showUser.username}}</h3>
     <span>{{showUser.signature}}</span>
-
     <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-
   </ion-item>
   <ion-item (click)="open('myPublish')">
     <ion-icon name="ios-basketball"></ion-icon>
